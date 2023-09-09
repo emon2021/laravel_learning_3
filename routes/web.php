@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\routeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+})->name("bariJa");
+
+Route::prefix(sha1('/laravel/basic/learn/PHP'))->group(function () {
+
+    Route::get('/about',[routeController::class,'aboutPage'])->name('about-us');
+    Route::get('/contact',[routeController::class,'contactPage'])->name('contact-us');
+
 });
+
+
