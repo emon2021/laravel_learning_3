@@ -25,4 +25,7 @@ Route::prefix(sha1('/laravel/basic/learn/PHP'))->group(function () {
 
 });
 
+//middleware route
+Route::get('/country',[routeController::class,'country'])->name('country.us')->middleware('country');
+
 

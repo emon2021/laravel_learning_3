@@ -12,4 +12,9 @@ class routeController extends Controller
     function contactPage(){
         return view('contact');
     }
+
+    //middleware function
+    function country(){
+        return view("country");
+    }
 }
