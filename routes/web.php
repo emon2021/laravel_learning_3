@@ -22,7 +22,7 @@ Route::prefix(sha1('/laravel/basic/learn/PHP'))->group(function () {
 
     Route::get('/about',[routeController::class,'aboutPage'])->name('about-us');
     Route::get('/contact',[routeController::class,'contactPage'])->name('contact-us');
-
+    Route::post('/student/store',[routeController::class,'studentStore'])->name('student-store');
 });
 
 //middleware route
