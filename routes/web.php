@@ -18,6 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/laravel', function(){
+    return view('pages.laravel');
+})->name('laravel')->middleware('auth');
+
+
+
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
